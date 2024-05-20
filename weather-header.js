@@ -13,11 +13,9 @@ const currentWindSpeed = document.getElementById("current-windSpeed");
 fetch(url)
   .then((response) => response.json())
   .then((jsObject) => {
-    console.log(jsObject);
     let weather = jsObject.weather;
     let main = jsObject.main;
     let wind = jsObject.wind;
-    console.log(weather, main, wind);
     // stats.textContent = jsObject.weather[1].description;
 
     currentDesc.textContent = `${weather[0].description}`;
